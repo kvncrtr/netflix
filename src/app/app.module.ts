@@ -8,12 +8,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { PreviewCardComponent } from './components/preview-card/preview-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    PreviewCardComponent
   ],
   imports: [
     BrowserModule,
