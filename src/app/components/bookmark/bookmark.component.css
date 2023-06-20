@@ -1,5 +1,6 @@
 @media screen and (min-width: 375px) {
    .bookmark--container {
-      padding-top: 4.5rem;
+      padding: 4.5rem 1rem;
+      background-color: var(--clr-primary-800);
    }
 }
