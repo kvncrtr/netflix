@@ -1,0 +1,395 @@
+@media screen and (max-width: 375px){
+    .preview--card-container {
+        width: 164px;
+        height: 154px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .preview--thumbnail-container {
+        position: relative;
+        width: 164px;
+        height: 110px;
+        border-radius: 8px; 
+        background-image: url(../../../assets/thumbnails/the-great-lands/regular/large.jpg);
+        background-size: 164px 110px;
+        cursor: pointer;
+    }
+    
+    .preview--bookmark-container {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        width: 32px;
+        height: 32px;
+        background-color: #10141E;
+        opacity: 0.5;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: right;
+        margin-top: 8px;
+        margin-right: 8px;
+    }
+    
+    .bookmark {
+        height: 14px;
+    }
+
+    .preview--thumbnail-overlay {
+        width: 164px;
+        height: 110px;
+        border-radius: 8px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--fs-200);
+        line-height: 18px;
+        font-weight: var(--fw-medium);
+        color: var(--clr-neutral-100);
+    }
+
+    .play {
+        height: 20px;
+        width: 20px;
+        margin-right: 16px;
+    }
+
+    .preview--thumbnail-overlay:hover {
+        opacity: 1;
+    }
+    
+    .preview--thumbnail-playBtn{
+        width: 80px;
+        height: 32px;
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 28.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .preview--details-container {
+        width: 164px;
+        height: 36px;
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    li {
+        display: flex;
+        align-items: center;
+        margin-right: 6px;
+        font-size: 11px;
+        line-height: 14px;
+        font-weight: var(--fw-regular);
+        color: var(--clr-neutral-100);
+        opacity: 0.75;
+    } 
+
+    ul li:before {
+        content: "";
+        display: inline-block;
+        width: 2px;
+        height: 2px;
+        background-color: #FFFFFF;
+        opacity: 0.5;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+
+    ul li:first-child::before{
+        display: none;
+    }
+
+    ul img {
+        width: 10px;
+        height: 10px;
+        opacity: 0.75;
+    }
+
+    h4 {
+        font-size: var(--fs-200);
+        line-height: 18px;
+        font-weight: var(--fw-medium);
+        color: var(--clr-neutral-100);
+    }
+}
+
+@media screen and (min-width: 376px){
+    .preview--card-container {
+        width: 220px;
+        height: 192px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .preview--thumbnail-container {
+        position: relative;
+        width: 220px;
+        height: 140px;
+        border-radius: 8px; 
+        background-image: url(../../../assets/thumbnails/the-great-lands/regular/large.jpg);
+        background-size: 220px 140px;
+    }
+    
+    .preview--bookmark-container {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        width: 32px;
+        height: 32px;
+        background-color: #10141E;
+        opacity: 0.5;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: right;
+        margin-top: 16px;
+        margin-right: 16px;
+    }
+    
+    .bookmark {
+        height: 14px;
+    }
+
+    .preview--thumbnail-overlay {
+        width: 220px;
+        height: 140px;
+        border-radius: 8px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--fs-500);
+        line-height: 23px;
+        font-weight: var(--fw-medium);
+        color: var(--clr-neutral-100);
+    }
+
+    .play {
+        height: 30px;
+        width: 30px;
+        margin-right: 19px;
+    }
+
+    .preview--thumbnail-overlay:hover {
+        opacity: 1;
+    }
+    
+    .preview--thumbnail-playBtn{
+        width: 117px;
+        height: 48px;
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 28.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .preview--details-container {
+        width: 220px;
+        height: 44px;
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    li {
+        display: flex;
+        align-items: center;
+        margin-right: 8px;
+        font-size: var(--fs-100);
+        line-height: 16px;
+        font-weight: var(--fw-regular);
+        color: var(--clr-neutral-100);
+        opacity: 0.75;
+    } 
+
+    ul li:before {
+        content: "";
+        display: inline-block;
+        width: 3px;
+        height: 3px;
+        background-color: #FFFFFF;
+        opacity: 0.5;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+
+    ul li:first-child::before{
+        display: none;
+    }
+
+    ul img {
+        width: 12px;
+        height: 12px;
+        opacity: 0.75;
+    }
+
+    h4 {
+        font-size: var(--fs-500);
+        line-height: 23px;
+        font-weight: var(--fw-medium);
+        color: var(--clr-neutral-100);
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .preview--card-container {
+        width: 280px;
+        height: 226px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .preview--thumbnail-container {
+        position: relative;
+        width: 280px;
+        height: 174px;
+        border-radius: 8px; 
+        background-image: url(../../../assets/thumbnails/the-great-lands/regular/large.jpg);
+        background-size: 280px 174px;
+    }
+    
+    .preview--bookmark-container {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        width: 32px;
+        height: 32px;
+        background-color: #10141E;
+        opacity: 0.5;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+        margin-right: 16px;
+    }
+    
+    .bookmark {
+        height: 14px;
+    }
+
+    .preview--thumbnail-overlay {
+        width: 280px;
+        height: 174px;
+        border-radius: 8px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--fs-500);
+        line-height: 23px;
+        font-weight: var(--fw-medium);
+        color: var(--clr-neutral-100);
+    }
+
+    .play {
+        height: 30px;
+        width: 30px;
+        margin-right: 19px;
+    }
+
+    .preview--thumbnail-overlay:hover {
+        opacity: 1;
+    }
+    
+    .preview--thumbnail-playBtn{
+        width: 117px;
+        height: 48px;
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 28.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .preview--details-container {
+        width: 280px;
+        height: 44px;
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    li {
+        display: flex;
+        align-items: center;
+        margin-right: 8px;
+        font-size: var(--fs-100);
+        line-height: 16px;
+        font-weight: var(--fw-regular);
+        color: var(--clr-neutral-100);
+        opacity: 0.75;
+    } 
+
+    ul li:before {
+        content: "";
+        display: inline-block;
+        width: 3px;
+        height: 3px;
+        background-color: #FFFFFF;
+        opacity: 0.5;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+
+    ul li:first-child::before{
+        display: none;
+    }
+
+    ul img {
+        width: 12px;
+        height: 12px;
+        opacity: 0.75;
+    }
+
+    h4 {
+        font-size: var(--fs-500);
+        line-height: 23px;
+        font-weight: var(--fw-medium);
+        color: var(--clr-neutral-100);
+    }
+}
+
+
+
