@@ -20,11 +20,6 @@
         width: 25px;
     }
 
-    a img {
-        width: 16px;
-        height: 16px;
-    }
-
     .navigation {
         margin-top: 0px;
         height: 16px;
@@ -35,11 +30,27 @@
         align-items: center;
     }
 
+    a img {
+        width: 16px;
+        height: 16px;
+    }
+    
+    a.active {
+        filter: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(50%) hue-rotate(165deg) brightness(122%) contrast(100%);
+    }
+    
+    a img:hover {
+        filter: brightness(0) saturate(100%) invert(49%) sepia(73%) saturate(4232%) hue-rotate(332deg) brightness(97%) contrast(103%);
+        cursor: pointer;
+    }
+
     .avatar {
         width: 24px;
         margin-bottom: 0px;
         margin-top: 0px;
         margin-right: 16px;
+        border-radius: 50%;
+        border: 1px solid white;
     }
 }
 
