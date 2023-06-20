@@ -77,7 +77,6 @@
     .preview--details-container {
         width: 164px;
         height: 36px;
-        background-color: red;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -208,7 +207,6 @@
     .preview--details-container {
         width: 220px;
         height: 44px;
-        background-color: red;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -338,7 +336,6 @@
     .preview--details-container {
         width: 280px;
         height: 44px;
-        background-color: red;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
