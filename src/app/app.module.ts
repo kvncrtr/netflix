@@ -11,6 +11,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { PreviewCardComponent } from './components/preview-card/preview-card.component';
 import { TvSeriesComponent } from './components/tv-series/tv-series.component';
 import { BookmarkComponent } from './components/bookmark/bookmark.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BookmarkComponent } from './components/bookmark/bookmark.component';
     SearchBarComponent,
     PreviewCardComponent,
     TvSeriesComponent,
-    BookmarkComponent
+    BookmarkComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
