@@ -1,6 +1,114 @@
-@media screen and (min-width: 325px) {
+@media screen and (max-width: 375px){
    .container {
       padding-top: 4.5rem;
       background-color: var(--clr-primary-800);
+   }
+
+   .trending-container {
+      display: flex;
+      flex-direction: column;
+      margin-left: 16px;
+   }
+
+   .recommended-container {
+      display: flex;
+      flex-direction: column;
+      margin-left: 16px;
+      margin-right: 16px;
+   }
+
+   h2 {
+      font-size: var(--fs-600);
+      line-height: 25px;
+      font-weight: var(--fw-regular);
+      color: var(--clr-neutral-100);
+   }
+
+   .recommended {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 24px;
+   }
+
+   .recommended > * {
+      margin-bottom: 16px;
+   }
+}
+
+@media screen and (min-width: 376px){
+   .container {
+      padding-top: 4.5rem;
+      background-color: var(--clr-primary-800);
+   }
+
+   .trending-container {
+      display: flex;
+      flex-direction: column;
+      margin-left: 25px;
+   }
+
+   .recommended-container {
+      display: flex;
+      flex-direction: column;
+      margin-left: 25px;
+      margin-right: 25px;
+   }
+
+   h2 {
+      font-size: var(--fs-800);
+      line-height: 40px;
+      font-weight: var(--fw-regular);
+      color: var(--clr-neutral-100);
+   }
+
+   .recommended {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 24px;
+   }
+
+   .recommended > * {
+      margin-bottom: 24px;
+   }
+}
+
+@media screen and (min-width: 1440px){
+   .container {
+      padding-top: 4.5rem;
+      background-color: var(--clr-primary-800);
+      padding-left: 164px;
+   }
+
+   .trending-container {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0px;
+   }
+
+   .recommended-container {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0px;
+      margin-right: 36px;
+   }
+
+   h2 {
+      font-size: var(--fs-800);
+      line-height: 40px;
+      font-weight: var(--fw-regular);
+      color: var(--clr-neutral-100);
+   }
+
+   .recommended {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 32px;
+   }
+
+   .recommended > * {
+      margin-bottom: 16px;
    }
 }
