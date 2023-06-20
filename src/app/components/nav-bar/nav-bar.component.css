@@ -27,7 +27,7 @@ a img {
     height: 20px;
 }
 
-a img.active {
+a.active {
     filter: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(50%) hue-rotate(165deg) brightness(122%) contrast(100%);
 }
 
