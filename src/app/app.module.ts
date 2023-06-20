@@ -12,6 +12,7 @@ import { PreviewCardComponent } from './components/preview-card/preview-card.com
 import { TvSeriesComponent } from './components/tv-series/tv-series.component';
 import { BookmarkComponent } from './components/bookmark/bookmark.component';
 import { HomeComponent } from './components/home/home.component';
+import { MoviesComponent } from './components/movies/movies.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './components/home/home.component';
     PreviewCardComponent,
     TvSeriesComponent,
     BookmarkComponent,
-    HomeComponent
+    HomeComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
