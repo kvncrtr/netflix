@@ -1,0 +1,76 @@
+@media screen and (min-width: 375px){
+    .preview--card--container {
+        width: 164px;
+        height: 154px;
+    }
+    
+    .preview--thumbnail-container {
+        width: 164px;
+        height: 110px;
+        border-radius: 8px; 
+        background-image: url(../../../assets/thumbnails/the-great-lands/regular/large.jpg);
+        background-size: 164px 110px;
+    }
+    
+    .preview-bookmark-container {
+        width: 32px;
+        height: 32px;
+        background-color: #10141E;
+        opacity: 0.5;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: right;
+        margin-top: 8px;
+        margin-right: 8px;
+    }
+    
+    .preview--thumbnail-container img {
+        height: 14px;
+    }
+    
+    .preview--details-container {
+        width: 164px;
+        height: 36px;
+        background-color: red;
+    }
+    
+    ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    li {
+        display: flex;
+        align-items: center;
+        margin: 5px;
+    }
+
+    ul li:before {
+        content: "";
+        display: inline-block;
+        width: 2px;
+        height: 2px;
+        background-color: #FFFFFF;
+        opacity: 0.5;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+
+    ul li:first-child::before{
+        display: none;
+    }
+
+    ul img {
+        width: 10px;
+        height: 10px;
+        opacity: 0.75;
+    }
+}
+
+
+
+
