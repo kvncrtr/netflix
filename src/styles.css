@@ -1,5 +1,4 @@
 :root {
-
    /* colors */
    --clr-primary-400: #fc4747;
    --clr-primary-500: #5a698f;
@@ -21,11 +20,14 @@
    --fs-700: 1.5rem;   /* 24px */
    --fs-800: 2rem;     /* 32px */
 
-   /*  */
+   /* font family */
+   --ff-body: 'Outfit', 'Geneva', Tahoma, Verdana, 'Segoe', sans-serif;
+   --ff-heading: var(--ff-body);
+
+   /* font weight */
+   --fw-regular: 300;
+   --fw-medium: 500;
 }
-
-
-
 
 /* Box sizing rules */
 *,
