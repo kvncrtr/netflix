@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 /* Modules */ 
 import { ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 /* Components */ 
 import { AppComponent } from './app.component';
@@ -23,7 +24,8 @@ import { BookmarkComponent } from './components/bookmark/bookmark.component';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
