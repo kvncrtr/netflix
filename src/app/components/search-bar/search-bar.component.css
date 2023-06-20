@@ -1,0 +1,17 @@
+@media screen and (min-width: 375px) {
+   .search--container {
+      display: flex;
+      padding-left: 1rem;
+      background-color: var(--clr-primary-700);
+   }
+
+   .search--query {
+      min-width: 13.375rem;
+      margin-left: 1rem;
+      border: unset;
+      font-weight: var(--fw-regular);
+      font-size: var(--fs-400);
+      background-color: transparent;
+
+   }
+}

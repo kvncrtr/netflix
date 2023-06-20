@@ -29,6 +29,12 @@
    --fw-medium: 500;
 }
 
+@media screen and (min-width: 375px) {
+   .container {
+
+   }
+}
+
 /* Box sizing rules */
 *,
 *::before,
