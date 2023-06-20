@@ -1,8 +1,10 @@
 @media screen and (min-width: 375px) {
    .search--container {
       display: flex;
+      align-items: center;
+      height: 4.5rem;
       padding-left: 1rem;
-      background-color: var(--clr-primary-700);
+      background-color: var(--clr-primary-800);
    }
 
    .search--query {
