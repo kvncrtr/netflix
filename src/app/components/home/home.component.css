@@ -1,4 +1,4 @@
-@media screen and (max-width: 375px){
+@media screen and (min-width: 375px){
    .container {
       padding-top: 4.5rem;
       background-color: var(--clr-primary-800);
@@ -196,10 +196,7 @@
 
 @media screen and (min-width: 376px){
    .container {
-      padding-top: 4.5rem;
-      background-color: var(--clr-primary-800);
-      padding-left: 25px;
-      padding-right: 25px;
+      padding: 5.938rem 1.563rem 2.375rem;
    }
 
    .trending-container {
@@ -393,9 +390,8 @@
 
 @media screen and (min-width: 1440px){
    .container {
-      padding-top: 4.5rem;
-      background-color: var(--clr-primary-800);
-      padding-left: 164px;
+      margin: 0;
+      padding: 2rem 2.5rem 4.313rem 10.25rem;
    }
 
    .trending-container {
