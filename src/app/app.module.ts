@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 /* Modules */ 
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 /* Components */ 
 import { AppComponent } from './app.component';
@@ -29,7 +30,8 @@ import { MoviesComponent } from './components/movies/movies.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
