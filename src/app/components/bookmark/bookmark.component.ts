@@ -22,15 +22,13 @@ export class BookmarkComponent {
     const subject = this.mediaService.fetchData();
     
     subject.subscribe((data: any) => {
-      data.reduce((prev: any, current: any) => {
+      data.reduce((prev: any, current: Media) => {
         if(current.category === "Movie" && current.isBookmarked) {
           this.bookmarkedMovies.push(current)
         } else if(current.category === "TV Series" && current.isBookmarked) {
           this.bookmarkedSeries.push(current)
         }
-      })
+      }, [])
     })
-
-    
   }
 }

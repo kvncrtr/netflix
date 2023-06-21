@@ -38,6 +38,7 @@
 
 @media screen and (min-width: 376px){
    .container {
+      min-height: 100vh;
       padding-top: 4.5rem;
       background-color: var(--clr-primary-800);
    }
