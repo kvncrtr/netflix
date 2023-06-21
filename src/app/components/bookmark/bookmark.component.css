@@ -1,6 +1,6 @@
 @media screen and (min-width: 375px) {
    .bookmark--container {
-      height: 100vh;
+      height: auto;
       padding: 4.5rem 1rem;
       background-color: var(--clr-primary-800);
    }
@@ -11,15 +11,15 @@
    }
 
    .bookmark--list-container {
-      max-width: 91vw;
-      display: flex;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       flex-wrap: wrap;
       gap: 1rem;
       margin-top: 1.5rem;
    }
-
-   app-preview-card {
-      flex-grow: 1;
-      flex-shrink: 1;
+   
+   .bookmark--tv-container {
+      margin-top: 1.5rem;
    }
 }

@@ -9,10 +9,16 @@
    .search--query {
       min-width: 13.375rem;
       margin-left: 1rem;
-      border: unset;
+      border: none;
       font-weight: var(--fw-regular);
       font-size: var(--fs-400);
+      color: var(--clr-primary-100);
       background-color: transparent;
+   }
 
+   .search--query:focus {
+      outline: none;
+      border-bottom: 0.5px solid rgba(90, 105, 143, 0.75);
+      caret-color: var(--clr-primary-400);
    }
 }
