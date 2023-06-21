@@ -1,6 +1,6 @@
 @media screen and (max-width: 375px){
    .container {
-      padding-top: 4.5rem;
+      /* padding-top: 4.5rem; */
       background-color: var(--clr-primary-800);
    }
 

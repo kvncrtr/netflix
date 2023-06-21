@@ -1,6 +1,25 @@
 @media screen and (min-width: 375px) {
    .bookmark--container {
+      height: 100vh;
       padding: 4.5rem 1rem;
       background-color: var(--clr-primary-800);
+   }
+
+   .bookmark--heading {
+      font-weight: var(--fw-regular);
+      font-size: var(--fs-600);
+   }
+
+   .bookmark--list-container {
+      max-width: 91vw;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+   }
+
+   app-preview-card {
+      flex-grow: 1;
+      flex-shrink: 1;
    }
 }

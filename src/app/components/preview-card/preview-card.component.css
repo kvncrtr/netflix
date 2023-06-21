@@ -1,4 +1,4 @@
-@media screen and (max-width: 375px){
+@media screen and (max-width: 374px){
     .preview--card-container {
         width: 164px;
         height: 154px;
@@ -129,29 +129,48 @@
     }
 }
 
-@media screen and (min-width: 376px){
+@media screen and (min-width: 375px){
     .preview--card-container {
-        width: 220px;
+        display: grid;
+        grid-template-rows: auto 2.25rem;
+        grid-template-areas: 
+            'thumbnail'
+            'details'
+        ;
+        width: 43.2vw;
+        min-height: 9.625rem;
+        margin: none;
+        gap: 1rem;
+        /* width: 220px;
         height: 192px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-between; */
     }
     
     .preview--thumbnail-container {
         position: relative;
+        grid-area: thumbnail;
+        width: 43.2vw;
+        /* 
         width: 220px;
         height: 140px;
         border-radius: 8px; 
         background-image: url(../../../assets/thumbnails/the-great-lands/regular/large.jpg);
-        background-size: 220px 140px;
+        background-size: 220px 140px; */
+    }
+
+    .preview--image {
+        border-radius: 0.625rem;
+        width: 43vw;
+        height: auto;
     }
     
     .preview--bookmark-container {
         position: absolute;
-        z-index: 1;
         top: 0;
         right: 0;
+        z-index: 3;
         width: 32px;
         height: 32px;
         background-color: #10141E;
@@ -160,9 +179,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        float: right;
-        margin-top: 16px;
-        margin-right: 16px;
+        margin-top: 0.5rem;
+        margin-right: 0.5rem;
     }
     
     .bookmark {
@@ -170,8 +188,13 @@
     }
 
     .preview--thumbnail-overlay {
-        width: 220px;
-        height: 140px;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        /* width: 220px;
+        height: 140px; */
+        width: 100%;
+        height: 100%;
         border-radius: 8px;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
         opacity: 0;
@@ -205,8 +228,9 @@
     }
     
     .preview--details-container {
-        width: 220px;
-        height: 44px;
+        grid-area: details;
+        width: 43.2vw;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
