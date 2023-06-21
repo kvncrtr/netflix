@@ -11,6 +11,5 @@ export class PreviewCardComponent implements OnInit {
 
   ngOnInit() {
     this.bookmark = this.cardData.isBookmarked;
-    console.log(this.bookmark);
   }
 }

@@ -145,7 +145,7 @@
 @media screen and (min-width: 375px){
     .preview--card-container {
         display: grid;
-        grid-template-rows: auto 2.25rem;
+        grid-template-rows: auto 3rem;
         grid-template-columns: 100%;
         grid-template-areas: 
             'thumbnail'
