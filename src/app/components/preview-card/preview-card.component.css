@@ -257,8 +257,8 @@
     li {
         display: flex;
         align-items: center;
-        margin-right: 8px;
-        font-size: var(--fs-100);
+        margin-right: 6px;
+        font-size: var(--fs-025);
         line-height: 16px;
         font-weight: var(--fw-regular);
         color: var(--clr-neutral-100);
@@ -275,11 +275,11 @@
         border-radius: 50%;
         margin-right: 5px;
     }
-
+    
     ul li:first-child::before{
         display: none;
     }
-
+    
     ul img {
         width: 12px;
         height: 12px;
@@ -287,13 +287,25 @@
         filter: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(50%) hue-rotate(165deg) brightness(122%) contrast(100%);
         margin-right: 6px;
     }
-
+    
     h4 {
         margin-top: 0.25rem;
-        font-size: var(--fs-500);
+        font-size: var(--fs-200);
         line-height: 23px;
         font-weight: var(--fw-medium);
         color: var(--clr-neutral-100);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    li {
+        margin-right: 0.5rem;
+        font-size: var(--fs-100);
+    }
+
+    h4 {
+        margin-top: 0.313rem;
+        font-size: var(--fs-500);
     }
 }
 

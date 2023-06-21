@@ -23,3 +23,19 @@
       margin-top: 1.5rem;
    }
 }
+
+@media screen and (min-width: 768px) {
+   .bookmark--container {
+     padding: 5.938rem 1.563rem 2.375rem; 
+   }
+
+   .bookmark--list-container {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.875rem;
+   }
+
+   .bookmark--heading {
+      font-size: var(--fs-800);
+
+   }
+}

@@ -67,7 +67,7 @@
     }
 
     .logo {
-        width: 32px;
+        width: 1.563rem;
         margin-top: 0px;
     }
 
@@ -95,12 +95,30 @@
     }
 
     .avatar {
-        width: 32px;
+        width: 1.5rem;
         margin-bottom: 0px;
         margin-top: 0px;
         margin-right: 16px;
         border-radius: 50%;
         border: 1px solid white;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        top: 1.438rem;
+        left: 2.1vw;
+        width: 93.6197vw;
+        border-radius: 0.625rem;
+    }
+
+    .logo {
+        width: 2rem;
+    }
+
+    .avatar {
+        width: 2rem;
+        height: 2rem;
     }
 }
 

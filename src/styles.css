@@ -10,6 +10,7 @@
    --clr-neutral-900: #000000;
 
    /* font sizes */
+   --fs-025: 0.688rem; /* 11px */
    --fs-050: 0.75rem;  /* 12px */
    --fs-100: 0.813rem; /* 13px */
    --fs-200: 0.875rem; /* 14px */
@@ -29,9 +30,9 @@
    --fw-medium: 500;
 }
 
-@media screen and (min-width: 375px) {
+/* @media screen and (min-width: 375px) {
    
-}
+} */
 
 /* Box sizing rules */
 *,

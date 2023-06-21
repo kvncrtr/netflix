@@ -22,3 +22,14 @@
       caret-color: var(--clr-primary-400);
    }
 }
+
+@media screen and (min-width: 768px) {
+   .search--container {
+      height: 6rem;
+   }
+
+   .search--query {
+      min-width: 20.0625rem;
+      font-size: var(--fs-600);
+   }
+}
