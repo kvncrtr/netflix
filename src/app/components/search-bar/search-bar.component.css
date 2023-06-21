@@ -33,3 +33,13 @@
       font-size: var(--fs-600);
    }
 }
+
+@media screen and (min-width: 1440px) {
+   .search--container {
+      height: 6.125rem;
+   }
+
+   .search--query {
+      font-size: var(--fs-700);
+   }
+}

@@ -135,7 +135,7 @@
         height: calc(100vh - 4rem);        
         margin: auto 0 auto 2rem;
         border-radius: 20px;
-        padding: none;
+        padding: 0;
         background: var(--clr-primary-700);
     }
     
