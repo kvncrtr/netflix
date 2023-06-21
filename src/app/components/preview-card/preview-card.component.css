@@ -39,6 +39,17 @@
         height: 14px;
     }
 
+    .preview--bookmark-container:hover{
+        background-color: #FFFFFF;
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .preview--bookmark-container:hover img{
+        filter: invert(5%) sepia(7%) saturate(4549%) hue-rotate(185deg) brightness(94%) contrast(93%);
+        opacity: 1;
+    }
+
     .preview--thumbnail-overlay {
         width: 164px;
         height: 110px;
@@ -119,6 +130,8 @@
         width: 10px;
         height: 10px;
         opacity: 0.75;
+        filter: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(50%) hue-rotate(165deg) brightness(122%) contrast(100%);
+        margin-right: 4px;
     }
 
     h4 {
@@ -185,6 +198,17 @@
     
     .bookmark {
         height: 14px;
+    }
+
+    .preview--bookmark-container:hover{
+        background-color: #FFFFFF;
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .preview--bookmark-container:hover img{
+        filter: invert(5%) sepia(7%) saturate(4549%) hue-rotate(185deg) brightness(94%) contrast(93%);
+        opacity: 1;
     }
 
     .preview--thumbnail-overlay {
@@ -273,6 +297,8 @@
         width: 12px;
         height: 12px;
         opacity: 0.75;
+        filter: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(50%) hue-rotate(165deg) brightness(122%) contrast(100%);
+        margin-right: 6px;
     }
 
     h4 {
@@ -320,6 +346,17 @@
     
     .bookmark {
         height: 14px;
+    }
+
+    .preview--bookmark-container:hover{
+        background-color: #FFFFFF;
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .preview--bookmark-container:hover img{
+        filter: invert(5%) sepia(7%) saturate(4549%) hue-rotate(185deg) brightness(94%) contrast(93%);
+        opacity: 1;
     }
 
     .preview--thumbnail-overlay {
@@ -402,6 +439,8 @@
         width: 12px;
         height: 12px;
         opacity: 0.75;
+        filter: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(50%) hue-rotate(165deg) brightness(122%) contrast(100%);
+        margin-right: 6px;
     }
 
     h4 {
