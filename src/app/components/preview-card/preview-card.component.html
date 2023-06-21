@@ -1,6 +1,6 @@
 <div class="preview--card-container">   
    <div class="preview--thumbnail-container">
-      <img class="preview--image" src="../../../assets/thumbnails/112/regular/small.jpg" alt="">
+      <img class="preview--image" src="{{ cardData.thumbnail.regular.large }}" alt="photo of {{ cardData.title }} from {{ cardData.year }}">
       
       <div class="preview--bookmark-container">
          <img class="bookmark" src="../../../assets/icon-bookmark-empty.svg" alt="bookmark empty">
@@ -16,22 +16,22 @@
       </div>
 
    </div>
-
+<!-- {{ cardData }} -->
    <div class="preview--details-container">
       <div class="preview--spec-container">
-
          <ul>
-            <li class="preview--spec-year">2019</li>
+            <li class="preview--spec-year">{{ cardData.year }}</li>
+
             <li>
-               <img class="preview--spec-tv" src="../../../assets/icon-nav-movies.svg" alt="type logo">
+               <img class="preview--spec-tv" src="../../../assets/icon-nav-movies.svg" alt="logo">
                Movie
             </li>
-            <li class="preview--spec-rating">E</li>
+            <li class="preview--spec-rating">{{ cardData.rating }}</li>
          </ul>
 
       </div>
 
-      <h4>The Great Lands</h4>
+      <h4>{{ cardData.title }}</h4>
       
    </div>
 

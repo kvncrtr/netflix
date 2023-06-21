@@ -9,6 +9,8 @@
 
     <div class="recommended-container">
         <h2>Recommended for you</h2>
-        <div class="recommended" ></div>
+        <div class="recommended" >
+            <app-preview-card *ngFor="let media of homeData" [cardData]="media"></app-preview-card>
+        </div>
     </div>
 </div>

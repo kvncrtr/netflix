@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-preview-card',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./preview-card.component.css']
 })
 export class PreviewCardComponent {
+  @Input('cardData') cardData: any;
 
+  ngOnInit() {
+    console.log(this.cardData)
+  }
 }
