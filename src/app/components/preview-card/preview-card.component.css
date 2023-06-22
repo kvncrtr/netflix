@@ -34,7 +34,10 @@
     }
     
     .bookmark {
-        height: 14px;
+        width: 0.723rem;
+        height: 1rem;
+        margin: 0;
+        padding: 0;
     }
 
     .preview--bookmark-container:hover{

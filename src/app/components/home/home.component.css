@@ -219,6 +219,7 @@
       display: flex;
       width: max-content;
       position: absolute;
+      column-gap: 1rem;
       cursor: grab;
    }
 
