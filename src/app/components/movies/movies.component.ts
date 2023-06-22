@@ -39,7 +39,7 @@ export class MoviesComponent {
 
   filterMovies(): void {
     if (this.searchTerm) {
-      this.movieData = this.defaultMovieData.filter(item =>
+      this.movieData = this.defaultMovieData.filter(item => 
         item.title.toLowerCase().includes(this.searchTerm.toLowerCase())
       );
     } else {

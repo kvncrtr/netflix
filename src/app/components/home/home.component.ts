@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { Media } from 'src/app/interfaces/media.interface';
 import { MediaService } from 'src/app/services/media.service';
 
+import { SearchService } from 'src/app/services/search.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,10 +13,21 @@ import { MediaService } from 'src/app/services/media.service';
 })
 export class HomeComponent implements OnInit {
   isFetching: boolean = false;
+
+  searchTerm: string;
   homeData: any;
+  defaultHomeData: any;
   trendingData: Media[] = [];
 
-  constructor(public mediaService: MediaService) {}
+  constructor(public mediaService: MediaService, private searchService: SearchService) {
+    this.searchTerm = this.searchService.getSearchTerm();
+
+    this.searchService.searchTerm$.subscribe(term => {
+      this.searchTerm = term;
+      this.filterData();
+    })
+  }
+
   @ViewChild('sliderContainer') sliderContainer!: ElementRef;
   @ViewChild('innerSlider') innerSlider!: ElementRef;
 
@@ -82,17 +95,33 @@ export class HomeComponent implements OnInit {
   getMedia() : void {
     const subject = this.mediaService.fetchData();
     
+    // subject.subscribe(data => {
+    //   this.homeData = data
+    //   data.reduce((prev: any, current: Media) => {
+    //     if (current.isTrending) {
+    //       prev.push(current)
+    //       return this.trendingData = prev
+    //     }
+    //     return this.trendingData
+    //   }, this.trendingData)
+    //   console.log(this.trendingData)
+    // })
+
     subject.subscribe(data => {
-      this.homeData = data
-      data.reduce((prev: any, current: Media) => {
-        if (current.isTrending) {
-          prev.push(current)
-          return this.trendingData = prev
-        }
-        return this.trendingData
-      }, this.trendingData)
-      console.log(this.trendingData)
-    })
+      this.defaultHomeData = data;
+      this.trendingData = data.filter(item => item.isTrending);
+      this.filterData();
+    });
+  }
+
+  filterData(): void {
+    if (this.searchTerm) {
+      this.homeData = this.defaultHomeData.filter(item => 
+        item. title.toLowerCase().includes(this.searchTerm.toLocaleLowerCase())
+      );
+    } else {
+      this.homeData = this.defaultHomeData;
+    }
   }
 }
 
