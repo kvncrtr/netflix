@@ -1,25 +1,7 @@
 <div class="movie--container">
     <app-search-bar></app-search-bar>
     <h2 class="movie--heading">Movies</h2>
-
     <div class="movie--series-list">
-        <app-preview-card></app-preview-card>
-        <app-preview-card></app-preview-card>
-        <app-preview-card></app-preview-card>
-        <app-preview-card></app-preview-card>
-        <app-preview-card></app-preview-card>
-        <app-preview-card></app-preview-card>
-        <app-preview-card></app-preview-card>
-        <app-preview-card></app-preview-card>
-        <app-preview-card></app-preview-card>
-        <app-preview-card></app-preview-card>
-        <app-preview-card></app-preview-card>
-        <app-preview-card></app-preview-card>
-        <app-preview-card></app-preview-card>
-        <app-preview-card></app-preview-card>
-        <app-preview-card></app-preview-card>
-        <app-preview-card></app-preview-card>
-        <app-preview-card></app-preview-card>
-       <app-preview-card></app-preview-card>
+        <app-preview-card *ngFor="let movie of movieData" [cardData]="movie"></app-preview-card>
     </div>
 </div>

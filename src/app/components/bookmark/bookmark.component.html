@@ -5,15 +5,7 @@
       <h2 id="moviesBookmarkHeading" class="bookmark--heading">Bookmarked Movies</h2>
 
       <div class="bookmark--list-container">
-         <app-preview-card></app-preview-card>
-         <app-preview-card></app-preview-card>
-         <app-preview-card></app-preview-card>
-         <app-preview-card></app-preview-card>
-         <app-preview-card></app-preview-card>
-         <app-preview-card></app-preview-card>
-         <app-preview-card></app-preview-card>
-         <app-preview-card></app-preview-card>
-         <app-preview-card></app-preview-card>
+         <app-preview-card *ngFor="let movie of bookmarkedMovies" [cardData]="movie"></app-preview-card>
          
       </div>
 
@@ -23,9 +15,7 @@
       <h2 id="tvBookmarkHeading" class="bookmark--heading">Bookmarked TV Series</h2>
       
       <div class="bookmark--list-container">
-         <app-preview-card></app-preview-card>
-         <app-preview-card></app-preview-card>
-         <app-preview-card></app-preview-card>
+         <app-preview-card *ngFor="let series of bookmarkedSeries" [cardData]="series"></app-preview-card>
       </div>
       
    </div>

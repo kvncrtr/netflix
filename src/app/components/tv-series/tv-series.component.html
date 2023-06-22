@@ -3,24 +3,7 @@
    <h2 class="tv--heading" >TV Series</h2>
 
    <div class="tv--series-list">
-      <app-preview-card></app-preview-card>
-      <app-preview-card></app-preview-card>
-      <app-preview-card></app-preview-card>
-      <app-preview-card></app-preview-card>
-      <app-preview-card></app-preview-card>
-      <app-preview-card></app-preview-card>
-      <app-preview-card></app-preview-card>
-      <app-preview-card></app-preview-card>
-      <app-preview-card></app-preview-card>
-      <app-preview-card></app-preview-card>
-      <app-preview-card></app-preview-card>
-      <app-preview-card></app-preview-card>
-      <app-preview-card></app-preview-card>
-      <app-preview-card></app-preview-card>
-      <app-preview-card></app-preview-card>
-      <app-preview-card></app-preview-card>
-      <app-preview-card></app-preview-card>
-      <app-preview-card></app-preview-card>
+      <app-preview-card *ngFor="let series of seriesData" [cardData]="series"></app-preview-card>
    </div>
    
 </div>
