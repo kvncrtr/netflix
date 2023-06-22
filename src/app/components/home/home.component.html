@@ -1,17 +1,19 @@
 <div class="container">
     <app-search-bar></app-search-bar>
 
-    <h2>Trending</h2>
-    <div class="trending-container" #sliderContainer>
-        <div class="trending-carousel" #innerSlider >
-            <app-trending-card *ngFor="let media of trendingData" [cardData]="media"></app-trending-card>
-
+    <div *ngIf="searchTerm == '' || searchTerm == null;">
+        <h2>Trending</h2>
+        <div class="trending-container" #sliderContainer>
+            <div class="trending-carousel" #innerSlider >
+                <app-trending-card *ngFor="let media of trendingData" [cardData]="media"></app-trending-card>
+            </div>
         </div>
     </div>
-
+    
     <div class="recommended-container">
-        <h2>Recommended for you</h2>
-        <div class="recommended" >
+        <h2 *ngIf="searchTerm == '' || searchTerm == null; else elseBlock ">Recommended for you</h2>
+        <ng-template #elseBlock><h2>Found {{homeData.length}} results for '{{searchTerm}}'</h2></ng-template>
+        <div class="recommended">
             <app-preview-card *ngFor="let media of homeData" [cardData]="media"></app-preview-card>
         </div>
     </div>
