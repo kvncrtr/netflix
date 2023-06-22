@@ -1,6 +1,7 @@
 <div class="tv--container">
    <app-search-bar></app-search-bar>
-   <h2 class="tv--heading" >TV Series</h2>
+   <h2 *ngIf="searchTerm == '' || searchTerm == null; else elseBlock " class="tv--heading">TV Series</h2>
+   <ng-template #elseBlock><h2 class="tv--heading">Found {{seriesData.length}} results for '{{searchTerm}}'</h2></ng-template>
 
    <div class="tv--series-list">
       <app-preview-card *ngFor="let series of seriesData" [cardData]="series"></app-preview-card>
