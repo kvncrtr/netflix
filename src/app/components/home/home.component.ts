@@ -91,6 +91,7 @@ export class HomeComponent implements OnInit {
         }
         return this.trendingData
       }, this.trendingData)
+      console.log(this.trendingData)
     })
   }
 }

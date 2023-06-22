@@ -15,6 +15,7 @@ import { TvSeriesComponent } from './components/tv-series/tv-series.component';
 import { BookmarkComponent } from './components/bookmark/bookmark.component';
 import { HomeComponent } from './components/home/home.component';
 import { MoviesComponent } from './components/movies/movies.component';
+import { TrendingCardComponent } from './components/trending-card/trending-card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MoviesComponent } from './components/movies/movies.component';
     TvSeriesComponent,
     BookmarkComponent,
     HomeComponent,
-    MoviesComponent
+    MoviesComponent,
+    TrendingCardComponent
   ],
   imports: [
     BrowserModule,

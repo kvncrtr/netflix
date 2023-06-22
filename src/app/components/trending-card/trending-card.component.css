@@ -1,0 +1,23 @@
+@media screen and (min-width: 375px) {
+   .trending--card {
+      width: 64vw;
+      height: auto;
+   }
+
+   .trending--thumbnail-container {
+      position: relative;
+   }
+
+   .trending--bookmark-container {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      width: 2rem;
+      height: 2rem;
+   }
+
+   .bookmark {
+      width: 0.723rem;
+      height: 1rem;
+   }
+}

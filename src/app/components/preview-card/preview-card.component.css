@@ -1,4 +1,4 @@
-@media screen and (max-width: 374px){
+@media screen and (min-width: 0px){
     .preview--card-container {
         width: 164px;
         height: 154px;
@@ -12,8 +12,6 @@
         width: 164px;
         height: 110px;
         border-radius: 8px; 
-        background-image: url(../../../assets/thumbnails/the-great-lands/regular/large.jpg);
-        background-size: 164px 110px;
         cursor: pointer;
     }
     
@@ -153,7 +151,6 @@
         ;
         width: 100%;
         min-height: 9.625rem;
-        /* row-gap: 1rem; */
     }
     
     .preview--thumbnail-container {
