@@ -11,7 +11,9 @@ import { MediaService } from 'src/app/services/media.service';
 export class MoviesComponent {
   movieData: Media[] = [];
 
-  constructor(private mediaService: MediaService) {}
+  constructor(
+    private mediaService: MediaService
+  ) {}
 
   ngOnInit(): void {
     this.getMoviesData()
