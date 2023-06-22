@@ -16,6 +16,7 @@ import { BookmarkComponent } from './components/bookmark/bookmark.component';
 import { HomeComponent } from './components/home/home.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { TrendingCardComponent } from './components/trending-card/trending-card.component';
+import { SearchService } from './services/search.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { TrendingCardComponent } from './components/trending-card/trending-card.
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
