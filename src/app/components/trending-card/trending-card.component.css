@@ -1,11 +1,14 @@
 @media screen and (min-width: 375px) {
    .trending--card {
-      width: 64vw;
-      height: auto;
+      width: 15rem;
+      height: 8.75rem;
    }
 
    .trending--thumbnail-container {
-      position: relative;
+      position: relative; 
+      width: 15rem;
+      /* 29.375 */
+      height: 8.75rem;
    }
 
    .trending--image {
@@ -49,9 +52,9 @@
       position: absolute;
       top: 0;
       left: 0;
+      bottom: 0;
+      right: 0;
       z-index: 3;
-      width: 64vw;
-      height: 100%;
       border-radius: 8px;
       background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
       opacity: 0;
@@ -145,5 +148,28 @@
       line-height: 23px;
       font-weight: var(--fw-medium);
       color: var(--clr-neutral-100);
+   }
+}
+
+@media screen and (min-width: 768px) {
+   .trending--card {
+      width: 29.375rem;
+      height: 14.375rem;
+   }
+
+   .trending--thumbnail-overlay {
+      width: 29.375rem;
+      height: 14.375rem;
+   }
+
+   .trending--thumbnail-container {
+      position: relative; 
+      width: 29.375rem;
+      height: 14.375rem;
+   }
+
+   .trending--image {
+      width: 29.375rem;
+      height: 14.375rem;
    }
 }

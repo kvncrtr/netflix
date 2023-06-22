@@ -194,7 +194,6 @@
 @media screen and (min-width: 375px){
    .container {
       min-height: 100vh;
-      /* padding: 5.938rem 1.563rem 2.375rem; */
       padding: 4.5rem 1rem;
       background-color: var(--clr-primary-800);
    }
@@ -207,7 +206,7 @@
 
    .trending-container {
       width: 100%;
-      height: 230px;
+      height: 8.75rem;
       margin-left: 0px;
       margin-top: 25px;
       margin-bottom: 40px;
@@ -218,7 +217,8 @@
    .trending-carousel {
       display: flex;
       width: max-content;
-      position: absolute;
+      height:  8.75rem;
+      position: relative;
       column-gap: 1rem;
       cursor: grab;
    }
@@ -368,9 +368,7 @@
    .recommended-container {
       display: flex;
       flex-direction: column;
-   }
-
-   
+   }  
 
    .recommended {
       width: 100%;
@@ -398,6 +396,14 @@
 
    h2 {
       font-size: var(--fs-800);
+   }
+
+   .trending-container {
+      height: 14.375rem;
+   }
+   
+   .trending-carousel {
+      height: 14.375rem;
    }
 }
 
