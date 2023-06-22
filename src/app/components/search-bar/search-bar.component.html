@@ -8,6 +8,12 @@
          class="search--query" 
          type="text" 
          placeholder="Search for movies or TV series"
+         [formControl] = "searchControl"
       />
    </div>
+<!-- 
+   <div>
+      <p *ngFor = "let result of searchResults">{{result}}</p>
+   </div>
+-->
 </div>
