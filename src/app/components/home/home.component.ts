@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit {
   searchTerm: string;
   homeData: any;
   defaultHomeData: any;
-  trendingData: Media[] = [];
 
   constructor(public mediaService: MediaService, private searchService: SearchService) {
     this.searchTerm = this.searchService.getSearchTerm();
@@ -109,7 +108,6 @@ export class HomeComponent implements OnInit {
 
     subject.subscribe(data => {
       this.defaultHomeData = data;
-      this.trendingData = data.filter(item => item.isTrending);
       this.filterData();
     });
   }
