@@ -5,7 +5,9 @@
         <h2>Trending</h2>
         <div class="trending-container" #sliderContainer>
             <div class="trending-carousel" #innerSlider >
-                <app-trending-card *ngFor="let media of trendingData" [cardData]="media" ></app-trending-card>
+                <ng-container *ngFor="let media of homeData">
+                    <app-trending-card *ngIf="media.isTrending" [cardData]="media"></app-trending-card>
+                </ng-container>
             </div>
         </div>
     </div>

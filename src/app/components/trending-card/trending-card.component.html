@@ -4,8 +4,8 @@
       <img class="trending--image" src="{{ cardData.thumbnail.regular.large }}" alt="photo of {{ cardData.title }} from {{ cardData.year }}">
       
       <div class="trending--bookmark-container">
-         <img *ngIf="!trend" class="bookmark" src="../../../assets/icon-bookmark-empty.svg" alt="bookmark empty">
-         <img *ngIf="trend" class="bookmark" src="../../../assets/icon-bookmark-full.svg" alt="bookmark full">
+         <img *ngIf="!bookmark" data-name="{{ cardData.title }}" class="bookmark" (click)="getElementName($event)" class="bookmark" src="../../../assets/icon-bookmark-empty.svg" alt="bookmark empty">
+         <img *ngIf="bookmark" data-name="{{ cardData.title }}" class="bookmark" (click)="getElementName($event)" class="bookmark" src="../../../assets/icon-bookmark-full.svg" alt="bookmark full">
       </div>
       
       <div class="trending--thumbnail-overlay">
