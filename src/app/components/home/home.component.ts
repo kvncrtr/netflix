@@ -1,5 +1,4 @@
 import { Component, HostListener, ElementRef, ViewChild, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 
 import { Media } from 'src/app/interfaces/media.interface';
 import { MediaService } from 'src/app/services/media.service';
@@ -18,6 +17,7 @@ export class HomeComponent implements OnInit {
   homeData: any;
   defaultHomeData: any;
   trendingData: Media[] = [];
+  memorySubject: any;
 
   constructor(public mediaService: MediaService, private searchService: SearchService) {
     this.searchTerm = this.searchService.getSearchTerm();
@@ -90,22 +90,26 @@ export class HomeComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getMedia()
-  }  
+    this.updateView()
+  }
+  
+  updateView() {
+    this.mediaService.currentMemory.subscribe(memory => {
+      this.memorySubject = memory;
+      
+      if (this.memorySubject != null) {
+        for(const index in this.homeData) {
+          if (this.homeData[index].id == this.memorySubject.id) {
+            this.homeData.splice(parseFloat(index), 1, this.memorySubject)
+          }
+        }
+      }
+    })
+  }
+  // console.log()
 
   getMedia() : void {
     const subject = this.mediaService.fetchData();
-    
-    // subject.subscribe(data => {
-    //   this.homeData = data
-    //   data.reduce((prev: any, current: Media) => {
-    //     if (current.isTrending) {
-    //       prev.push(current)
-    //       return this.trendingData = prev
-    //     }
-    //     return this.trendingData
-    //   }, this.trendingData)
-    //   console.log(this.trendingData)
-    // })
 
     subject.subscribe(data => {
       this.defaultHomeData = data;
