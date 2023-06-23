@@ -3,9 +3,12 @@
       <img class="preview--image" src="{{ cardData.thumbnail.regular.large }}" alt="photo of {{ cardData.title }} from {{ cardData.year }}">
       
       <div class="preview--bookmark-container">
-         <img *ngIf="!bookmark" class="bookmark" src="../../../assets/icon-bookmark-empty.svg" alt="bookmark empty">
-         <img *ngIf="bookmark" class="bookmark" src="../../../assets/icon-bookmark-full.svg" alt="bookmark full">
+         <img *ngIf="!bookmark" data-name="{{ cardData.title }}" class="bookmark" (click)="getElementName($event)" src="../../../assets/icon-bookmark-empty.svg" alt="bookmark empty">
+         <img *ngIf="bookmark" data-name="{{ cardData.title }}" class="bookmark" (click)="getElementName($event)" src="../../../assets/icon-bookmark-full.svg" alt="bookmark full">
       </div>
+      
+      <!-- getElementName($event) -->
+
       <div class="preview--thumbnail-overlay">
          <a class="preview--thumbnail-playBtn"><img class="play" src="./assets/icon-play.svg">Play</a>
       </div>

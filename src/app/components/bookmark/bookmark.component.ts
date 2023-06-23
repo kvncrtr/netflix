@@ -16,6 +16,7 @@ export class BookmarkComponent {
   defaultBookmarkedSeries: any = [];
   bookmarkedMovies: any = []
   bookmarkedSeries: any = []
+  memorySubject: any;
 
   constructor(public mediaService: MediaService, private searchService: SearchService) {
     this.searchTerm = this.searchService.getSearchTerm();
@@ -28,6 +29,7 @@ export class BookmarkComponent {
   
   ngOnInit(): void {
     this.getMedia()
+    this.onUpdateView()
   }
   
   getMedia() : void {
@@ -37,6 +39,24 @@ export class BookmarkComponent {
       this.defaultBookmarkedMovies = data.filter(item => item.category === "Movie" && item.isBookmarked);
       this.defaultBookmarkedSeries = data.filter(item => item.category === "TV Series" && item.isBookmarked);
       this.filterData();
+    })
+  }
+
+  onUpdateView() {
+    this.mediaService.currentMemory.subscribe(memory => {
+      this.memorySubject = memory
+      if (this.memorySubject != null) {
+        for (const index in this.bookmarkedMovies) {
+          if (this.bookmarkedMovies[index].id == this.memorySubject.id) {
+            this.bookmarkedMovies.splice(parseFloat(index), 1)
+          }
+        }
+        for (const index in this.bookmarkedSeries) {
+          if (this.bookmarkedSeries[index].id == this.memorySubject.id) {
+            this.bookmarkedSeries.splice(parseFloat(index), 1)
+          }
+        }
+      }
     })
   }
 

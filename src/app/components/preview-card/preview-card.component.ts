@@ -1,4 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+
+import { Media } from 'src/app/interfaces/media.interface';
+import { MediaService } from 'src/app/services/media.service';
 
 @Component({
   selector: 'app-preview-card',
@@ -7,9 +12,146 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PreviewCardComponent implements OnInit {
   @Input('cardData') cardData: any;
-  bookmark: boolean | undefined;
+
+  bookmark: boolean;
+  bookmarkData: Media[] = []
+  nameClicked: string = '';
+  objectRelation: Media;
+  
+
+  constructor(
+    private mediaService: MediaService,
+    private router: Router) {}
 
   ngOnInit() {
+    const subject = this.mediaService.fetchData()
     this.bookmark = this.cardData.isBookmarked;
+    
+    subject.subscribe(data => {
+      this.bookmarkData = data
+    })
+  }  
+
+  handleSubscription(id: any, body: object) {
+    this.mediaService.patchNewBookmarkValue(id, body)
+      .subscribe(data => {
+        this.mediaService.switchMemory(data);
+        console.log("successfully handled server change!");
+      })
+  }
+
+  associateElementsObject():void {
+    const associatedObject = this.bookmarkData.find(media => media.title === this.nameClicked)
+    const id = associatedObject.id;
+    const body = {
+      ...associatedObject,
+      isBookmarked: !associatedObject.isBookmarked
+    }
+    this.objectRelation = associatedObject;
+    this.handleSubscription(id, body)
+  }
+
+  getElementName(event: any) {
+    this.nameClicked = event.target.attributes.name.value
+    this.associateElementsObject()
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+ngOnInit() {
+    const subject = this.mediaService.fetchData()
+    this.bookmark = this.cardData.isBookmarked;
+    
+    subject.subscribe(data => {
+      this.bookmarkData = data
+    })
+  }
+
+  patchNewBookmarkValue(): void {
+    const id = this.objectRelation.id;
+    const body = {
+      ...this.objectRelation,
+      isBookmarked: !this.objectRelation.isBookmarked
+    };
+
+    // send a patch request to  firebase
+    this.http.patch(`${this.url}${id}${this.jsonExt}`, body)
+      .subscribe(res => {
+        this.cardData = res
+        // re-init the page with new data
+
+    });
+  }
+
+  associateElementsObject():void {
+    const associatedObject = this.bookmarkData.find(media => media.title === this.nameClicked)
+    this.objectRelation = associatedObject;
+    this.patchNewBookmarkValue()
+  }
+
+  getElementName(event: any) {
+    this.nameClicked = event.target.attributes.name.value
+    this.associateElementsObject()
+  }
+
+  second try 
+
+   patchNewBookmarkValue(): void {
+    const id = this.objectRelation.id;
+    if(this.nameClicked) {
+
+      this.mediaService.patchNewBookmarkValue(this.objectRelation, id)
+      .subscribe(data => {
+        this.objectRelationEvent.emit(data);        
+      })
+    } else {
+      console.log('error was found in previewcard component ts file')
+      return null
+    }
+
+  }
+
+*/ 
