@@ -23,7 +23,7 @@
         height: 26.25rem;
     }
 
-    h2 {
+    h2 { 
         font-size: var(--fs-800);
         font-weight: var(--fw-regular);
         margin-top: 1.5rem;
