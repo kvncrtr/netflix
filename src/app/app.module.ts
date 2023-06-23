@@ -17,6 +17,8 @@ import { HomeComponent } from './components/home/home.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { TrendingCardComponent } from './components/trending-card/trending-card.component';
 import { SearchService } from './services/search.service';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { SearchService } from './services/search.service';
     BookmarkComponent,
     HomeComponent,
     MoviesComponent,
-    TrendingCardComponent
+    TrendingCardComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
