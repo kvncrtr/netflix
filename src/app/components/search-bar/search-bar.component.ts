@@ -22,6 +22,5 @@ export class SearchBarComponent {
 
   search(searchTerm: string) {
     this.searchService.setSearchTerm(searchTerm);
-    console.log('Searching for', searchTerm);
   }
 }

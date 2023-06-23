@@ -47,7 +47,7 @@ export class MediaService {
     // console.log()
     return this.http.patch(`${this.url}${id}${this.jsonExt}`, body)
       .pipe(
-        tap((response: any) => {
+        tap(() => {
           const current = this.memorySubscription.getValue();
           const update = {...current, ...body}
           this.memorySubscription.next(update)
