@@ -2,6 +2,7 @@
    .trending--card {
       width: 15rem;
       height: 8.75rem;
+      border-radius: 0.5rem;
    }
 
    .trending--thumbnail-container {

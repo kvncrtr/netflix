@@ -11,7 +11,6 @@ export class SearchService {
   setSearchTerm(term: string) {
     this.searchTerm = term;
     this.searchTerm$.next(term);
-    console.log('checking to see if this is changing', this.searchTerm);
   }
 
   getSearchTerm(): string {
