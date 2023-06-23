@@ -1,0 +1,124 @@
+@media screen and (min-width: 375px){
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--clr-primary-800);
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    img {
+        width: 2rem;
+        margin-top: 3rem;
+        margin-bottom: 3.65rem;
+    }
+    
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--clr-primary-700);
+        border-radius: 10px;
+        width: 20.4375rem;
+        height: 26.25rem;
+    }
+
+    h2 {
+        font-size: var(--fs-800);
+        font-weight: var(--fw-regular);
+        margin-top: 1.5rem;
+        margin-left: 1.5rem;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    input[type="text"], input[type="email"] {
+        width: 17.4375rem;
+        height: 2.3125rem;
+        background: var(--clr-primary-700);
+        border: none;
+        outline: none;
+        border-bottom: 1px solid var(--clr-primary-600);
+        margin-bottom: 1.5rem;
+        caret-color: var(--clr-primary-400);
+        cursor: pointer;
+        padding-left: 1rem;
+        color: var(--clr-neutral-100);
+        font-weight: var(--fw-regular);
+    }
+
+    input[type="text"]:focus, input[type="email"]:focus, input[type="text"]:active, input[type="email"]:active{
+        border-bottom: 1px solid var(--clr-neutral-100);
+    }
+
+    input[type="submit"] {
+        width: 17.4375rem;
+        height: 3rem;
+        border-radius: 6px;
+        background: var(--clr-primary-400);
+        border: none;
+        margin-top: 1rem;
+        color: var(--clr-neutral-100);
+        font-weight: var(--fw-regular);
+        cursor: pointer;
+    }
+
+    input[type="submit"]:focus, input[type="submit"]:active, input[type="submit"]:hover {
+        color: var(--clr-neutral-900);
+        background: var(--clr-neutral-100);
+    }
+
+    p {
+        font-size: var(--fs-300);
+        font-weight: var(--fw-regular);
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: var(--fs-300);
+        font-weight: var(--fw-regular);
+        color: var(--clr-primary-400);
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    img {
+        margin-top: 5.5rem;
+        margin-bottom: 4.52rem;
+    }
+
+    .form-container {
+        border-radius: 20px;
+        width: 25rem;
+        height: 26.125rem;
+    }
+
+    h2 {
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+
+    input[type="text"], input[type="email"] {
+        width: 21rem;
+    }
+
+    input[type="submit"] {
+        width: 21rem;
+        margin-top: 0rem;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    img {
+        margin-top: 4.9rem;
+        margin-bottom: 5.19rem;
+    }
+}
