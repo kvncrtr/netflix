@@ -48,6 +48,9 @@
         margin-bottom: 1.5rem;
         caret-color: var(--clr-primary-400);
         cursor: pointer;
+        padding-left: 1rem;
+        color: var(--clr-neutral-100);
+        font-weight: var(--fw-regular);
     }
 
     input[type="text"]:focus, input[type="email"]:focus, input[type="text"]:active, input[type="email"]:active{
