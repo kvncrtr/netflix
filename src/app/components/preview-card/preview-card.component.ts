@@ -36,7 +36,6 @@ export class PreviewCardComponent implements OnInit {
     this.mediaService.patchNewBookmarkValue(id, body)
       .subscribe(data => {
         this.mediaService.switchMemory(data);
-        console.log("successfully handled server change!");
       })
   }
 
