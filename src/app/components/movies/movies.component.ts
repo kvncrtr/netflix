@@ -14,6 +14,7 @@ export class MoviesComponent {
   searchTerm: string;
   movieData: Media[] = [];
   defaultMovieData: Media[] = [];
+  memorySubject: any;
 
   constructor(private mediaService: MediaService, private searchService: SearchService) {
     this.searchTerm = this.searchService.getSearchTerm();
@@ -26,6 +27,7 @@ export class MoviesComponent {
 
   ngOnInit(): void {
     this.getMoviesData()
+    this.onUpdateView()
   }
 
   getMoviesData(): void {
@@ -36,6 +38,20 @@ export class MoviesComponent {
       this.filterMovies();
     });
   }
+
+  onUpdateView() {
+    this.mediaService.currentMemory.subscribe(memory => {
+      this.memorySubject = memory;
+      if (this.memorySubject != null) {
+        for (const index in this.movieData) {
+          if (this.movieData[index].id === this.memorySubject.id) {
+             this.movieData.splice(parseFloat(index), 1, this.memorySubject)
+          }
+        }
+       }
+    })
+  }
+  // console.log()
 
   filterMovies(): void {
     if (this.searchTerm) {
