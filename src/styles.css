@@ -71,6 +71,7 @@ html,
 body {
   height: 100%;
   font-family: var(--ff-body);
+  font-size: 16px;
 }
 
 /* A elements that don't have a class get default styles */
