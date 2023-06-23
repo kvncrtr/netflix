@@ -51,6 +51,11 @@ export class BookmarkComponent {
             this.bookmarkedMovies.splice(parseFloat(index), 1)
           }
         }
+        for (const index in this.bookmarkedSeries) {
+          if (this.bookmarkedSeries[index].id == this.memorySubject.id) {
+            this.bookmarkedSeries.splice(parseFloat(index), 1)
+          }
+        }
       }
     })
   }
