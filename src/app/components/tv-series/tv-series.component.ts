@@ -14,6 +14,7 @@ export class TvSeriesComponent implements OnInit {
   searchTerm: string;
   seriesData: any = [];
   defaultSeriesData: Media[] = [];
+  memorySubject: any;
 
   constructor(private mediaService: MediaService, private searchService: SearchService) {
     this.searchTerm = this.searchService.getSearchTerm();
@@ -26,6 +27,21 @@ export class TvSeriesComponent implements OnInit {
   
   ngOnInit(): void {
     this.getSeriesData()
+    this.updateView()
+  }
+
+  updateView() {
+    this.mediaService.currentMemory.subscribe(memory => {
+      this.memorySubject = memory
+
+      if (this.memorySubject != null) {
+        for (const index in this.seriesData) {
+          if (this.seriesData[index].id == this.memorySubject.id) {
+            this.seriesData.splice(parseFloat(index), 1, this.memorySubject)
+          }
+        }
+      }
+    })
   }
 
   getSeriesData(): void {
