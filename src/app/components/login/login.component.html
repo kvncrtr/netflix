@@ -1,14 +1,27 @@
 <div class="container">
-    <div class="login--case">
-        
+    <div class="login--case">        
         <img class="login--logo" src="./assets/logo.svg">
         
         <div class="form--container">
             <h2 class="login--heading">Login</h2>
             
-            <form class="login--fields">
-                <input type="email" placeholder="Email address">
-                <input type="password" placeholder="Password">
+            <form (ngSubmit)="getSubmitMethod(loginForm)" #loginForm="ngForm" class="login--fields">
+                <input 
+                    id="loginEmail" 
+                    type="email" 
+                    placeholder="Email address"
+                    ngModel
+                    name="email" 
+                >
+
+                <input 
+                    id="loginPassword" 
+                    type="password" 
+                    placeholder="Password"
+                    ngModel
+                    name="password" 
+                >
+
                 <button type="submit" value="">Log in to your account</button>
                 
             </form>
