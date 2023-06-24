@@ -1,7 +1,4 @@
-<router-outlet></router-outlet>
-
-<!-- 
+<div *ngIf="isLoggedIn === 'true'">
   <app-nav-bar></app-nav-bar>
-   <app-signup></app-signup>
-   <app-login></app-login>
- -->
+</div>
+<router-outlet></router-outlet>

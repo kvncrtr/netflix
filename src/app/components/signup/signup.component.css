@@ -38,7 +38,7 @@
         margin-bottom: 1.5rem;
     }
 
-    input[type="text"], input[type="email"] {
+    input[type="password"], input[type="email"] {
         width: 17.4375rem;
         height: 2.3125rem;
         background: var(--clr-primary-700);
@@ -57,7 +57,7 @@
         border-bottom: 1px solid var(--clr-neutral-100);
     }
 
-    input[type="submit"] {
+    button {
         width: 17.4375rem;
         height: 3rem;
         border-radius: 6px;
@@ -69,7 +69,7 @@
         cursor: pointer;
     }
 
-    input[type="submit"]:focus, input[type="submit"]:active, input[type="submit"]:hover {
+    button:focus, button:active, button:hover {
         color: var(--clr-neutral-900);
         background: var(--clr-neutral-100);
     }
@@ -106,11 +106,11 @@
         margin-left: 2rem;
     }
 
-    input[type="text"], input[type="email"] {
+    input[type="password"], input[type="email"] {
         width: 21rem;
     }
 
-    input[type="submit"] {
+    button {
         width: 21rem;
         margin-top: 0rem;
     }
