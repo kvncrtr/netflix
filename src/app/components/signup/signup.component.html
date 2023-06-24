@@ -8,6 +8,6 @@
             <input type="password" [(ngModel)]="user.confirmPassword" name="confirmPassword" placeholder="Repeat Password" required>
             <button type="submit" [disabled]="!signupForm.form.valid">Create an account</button>
         </form>
-        <p>Already have an account? <a href="">Login</a></p>
+        <p>Already have an account? <a routerLink="/login">Login</a></p>
     </div>
 </div>
