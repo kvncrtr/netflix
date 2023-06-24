@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 
-import { LocalStorage } from '../interfaces/local-storage.interface';
+import { LocalStorage } from 'src/app/interfaces/local-storage.interface';
 import { NgForm } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -9,9 +11,17 @@ import { NgForm } from '@angular/forms';
 export class OauthService {
   isLoggedIn: string = this.getKeyValue('isLoggedIn');
   uuid: string = this.getKeyValue('uuid');
-  launchReady: boolean = false;
+  userInfo: any;
+  invalidEmail = true;
+  validPassword = false;
+  launchReady = false;
+  url = 'https://netflix-clone-fire-8079b-default-rtdb.firebaseio.com/Users'; 
+  jsonExt = '.json';
 
-  constructor() { }
+
+  constructor(
+    private http: HttpClient,
+    private router: Router) { }
 
   public saveToLocalStorage(key: string, value: string) {
     localStorage.setItem(key, value);
@@ -29,9 +39,16 @@ export class OauthService {
     localStorage.clear();
   }
 
-  // console.log()
   onSubmit(form: NgForm) {
-    console.log(form.value)
+    this.userInfo = {
+      ...this.userInfo,
+      email: form.value.email,
+      password: form.value.password
+    }
+    return this.getUsers()
   }
 
+  getUsers() {
+    return this.http.get(`${this.url}${this.jsonExt}`)
+  }
 }

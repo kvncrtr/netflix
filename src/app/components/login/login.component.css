@@ -31,12 +31,12 @@
       border-radius: 0.563rem;
       background-color: var(--clr-primary-700);
    }
-
+   
    .login--heading {
       font-size: var(--fs-800);
       letter-spacing: -0.03125rem;
    }
-
+   
    input[type='email'] {
       width: 17.4375rem;
       height: 2.3125rem;
@@ -47,6 +47,31 @@
       color: var(--clr-neutral-100);
       background-color: transparent;
       cursor: pointer;
+   }
+   
+   .login--form-case {
+      position: relative;
+   }
+
+   .email--error,
+   .password--error {
+      position: absolute;
+      top: 3.1rem;
+      right: 1rem;
+      width: max-content;
+      font-size: var(--fs-100);
+      color: var(--clr-primary-400);
+   }
+
+   .password--error {
+      top: 2.1rem;
+   }
+
+   .bottom--error-message {
+      color: var(--clr-primary-400);
+      font-weight: var(--fw-regular);
+      font-size: var(--fs-100);
+      padding-left: 1rem;
    }
    
    input[type='password'] { 
