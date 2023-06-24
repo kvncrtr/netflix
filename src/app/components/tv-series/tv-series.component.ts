@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
-import { MediaService } from 'src/app/services/media.service';
 import { Media } from 'src/app/interfaces/media.interface';
 
+import { MediaService } from 'src/app/services/media.service';
+import { OauthService } from 'src/app/services/oauth.service';
 import { SearchService } from 'src/app/services/search.service';
 
 @Component({
@@ -11,12 +13,17 @@ import { SearchService } from 'src/app/services/search.service';
   styleUrls: ['./tv-series.component.css']
 })
 export class TvSeriesComponent implements OnInit {
+  isLoggedIn: string = this.oauth.getKeyValue('isLoggedIn');
   searchTerm: string;
   seriesData: any = [];
   defaultSeriesData: Media[] = [];
   memorySubject: any;
 
-  constructor(private mediaService: MediaService, private searchService: SearchService) {
+  constructor(
+    private mediaService: MediaService, 
+    private searchService: SearchService,
+    private oauth: OauthService,
+    private router: Router) {
     this.searchTerm = this.searchService.getSearchTerm();
 
     this.searchService.searchTerm$.subscribe(term => {
@@ -28,6 +35,15 @@ export class TvSeriesComponent implements OnInit {
   ngOnInit(): void {
     this.getSeriesData()
     this.updateView()
+    this.redirectToHome(this.isLoggedIn);
+  }
+
+  redirectToHome(isLoggedIn: string) {
+    if(isLoggedIn === "true"){
+      this.router.navigate(["/home"]);
+    } else if (isLoggedIn === null) {
+      this.router.navigate(['/login'])
+    }
   }
 
   updateView() {

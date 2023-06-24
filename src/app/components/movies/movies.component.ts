@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Media } from 'src/app/interfaces/media.interface';
 import { MediaService } from 'src/app/services/media.service';
+import { OauthService } from 'src/app/services/oauth.service';
 
 import { SearchService } from 'src/app/services/search.service';
 
@@ -11,12 +13,17 @@ import { SearchService } from 'src/app/services/search.service';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent {
+  isLoggedIn: string = this.oauth.getKeyValue('isLoggedIn');
   searchTerm: string;
   movieData: Media[] = [];
   defaultMovieData: Media[] = [];
   memorySubject: any;
 
-  constructor(private mediaService: MediaService, private searchService: SearchService) {
+  constructor(
+      private mediaService: MediaService, 
+      private searchService: SearchService,
+      private oauth: OauthService,
+      private router: Router) {
     this.searchTerm = this.searchService.getSearchTerm();
 
     this.searchService.searchTerm$.subscribe(term => {
@@ -28,6 +35,15 @@ export class MoviesComponent {
   ngOnInit(): void {
     this.getMoviesData()
     this.onUpdateView()
+    this.redirectToHome(this.isLoggedIn);
+  }
+
+  redirectToHome(isLoggedIn: string) {
+    if(isLoggedIn === "true"){
+      this.router.navigate(["/home"]);
+    } else if (isLoggedIn === null) {
+      this.router.navigate(['/login'])
+    }
   }
 
   getMoviesData(): void {
