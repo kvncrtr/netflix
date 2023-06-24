@@ -35,15 +35,6 @@ export class MoviesComponent {
   ngOnInit(): void {
     this.getMoviesData()
     this.onUpdateView()
-    this.redirectToHome(this.isLoggedIn);
-  }
-
-  redirectToHome(isLoggedIn: string) {
-    if(isLoggedIn === "true"){
-      this.router.navigate(["/home"]);
-    } else if (isLoggedIn === null) {
-      this.router.navigate(['/login'])
-    }
   }
 
   getMoviesData(): void {

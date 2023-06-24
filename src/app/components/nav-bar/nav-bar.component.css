@@ -64,6 +64,9 @@
         position: fixed;
         z-index: 1000;
         padding: 18px 1rem;
+        position: relative;
+        top: 0;
+        left: -1rem;
     }
 
     .logo {
@@ -107,8 +110,8 @@
 @media screen and (min-width: 768px) {
     .container {
         top: 1.438rem;
-        left: 2.1vw;
-        width: 93.6197vw;
+        left: 0vw;
+        width: 100%;
         border-radius: 0.625rem;
     }
 

@@ -35,15 +35,6 @@ export class TvSeriesComponent implements OnInit {
   ngOnInit(): void {
     this.getSeriesData()
     this.updateView()
-    this.redirectToHome(this.isLoggedIn);
-  }
-
-  redirectToHome(isLoggedIn: string) {
-    if(isLoggedIn === "true"){
-      this.router.navigate(["/home"]);
-    } else if (isLoggedIn === null) {
-      this.router.navigate(['/login'])
-    }
   }
 
   updateView() {

@@ -1,7 +1,7 @@
 @media screen and (min-width: 375px) {
    .tv--container {
       min-height: 100vh;
-      padding: 4.5rem 1rem;
+      padding: 0rem 1rem;
       background-color: var(--clr-primary-800);
    }
 
@@ -22,7 +22,7 @@
 
 @media screen and (min-width: 768px) {
    .tv--container {
-     padding: 5.938rem 1.563rem 2.375rem; 
+     padding: 0rem 1.563rem 2.375rem; 
    }
 
    .tv--series-list {
