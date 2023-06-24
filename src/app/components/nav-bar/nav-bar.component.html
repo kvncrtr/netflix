@@ -6,5 +6,7 @@
         <a routerLink="/tv-series" routerLinkActive="active"><img src="./assets/icon-nav-tv-series.svg"></a>
         <a routerLink="/bookmark" routerLinkActive="active"><img src="./assets/icon-nav-bookmark.svg"></a>
     </div>
-    <img class="avatar" src="./assets/image-avatar.png" routerLink="/home" routerLinkActive="active">
+    <div (click)="logout()">
+        <img class="avatar" src="./assets/image-avatar.png">
+    </div>
 </div>

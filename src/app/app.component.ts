@@ -11,10 +11,9 @@ export class AppComponent implements OnInit {
   isLoggedIn: string;
   
   constructor(private oauthService: OauthService) {
-    this.isLoggedIn = this.oauthService.isLoggedIn;
   }
 
   ngOnInit(): void {
-    
+    this.isLoggedIn = this.oauthService.getKeyValue("isLoggedIn");
   }
 }

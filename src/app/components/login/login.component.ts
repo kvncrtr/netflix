@@ -22,7 +22,13 @@ export class LoginComponent implements OnInit {
     private router: Router) {}
 
   ngOnInit(): void {
-    
+    this.redirectToHome(this.isLoggedIn);
+  }
+
+  redirectToHome(isLoggedIn: string) {
+    if(isLoggedIn === "true"){
+      this.router.navigate(["/home"]);
+    }
   }
 
   validateUser(form: NgForm) {

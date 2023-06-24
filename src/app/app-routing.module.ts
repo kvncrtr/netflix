@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'movies', component: MoviesComponent },
   { path: 'tv-series', component: TvSeriesComponent },
   { path: 'bookmark', component: BookmarkComponent },
-  { path: '**', component: HomeComponent }
+  { path: '**', component: LoginComponent }
 
 ];
 
