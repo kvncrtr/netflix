@@ -1,4 +1,5 @@
 <div class="tv--container">
+   <app-nav-bar></app-nav-bar>
    <app-search-bar></app-search-bar>
    <h2 *ngIf="searchTerm == '' || searchTerm == null; else elseBlock " class="tv--heading">TV Series</h2>
    <ng-template #elseBlock><h2 class="tv--heading">Found {{seriesData.length}} results for '{{searchTerm}}'</h2></ng-template>

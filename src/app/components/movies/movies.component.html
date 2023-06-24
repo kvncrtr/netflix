@@ -1,4 +1,5 @@
 <div class="movie--container">
+    <app-nav-bar></app-nav-bar>
     <app-search-bar></app-search-bar>
     <h2 *ngIf="searchTerm == '' || searchTerm == null; else elseBlock " class="movie--heading">Movies</h2>
     <ng-template #elseBlock><h2 class="movie--heading">Found {{movieData.length}} results for '{{searchTerm}}'</h2></ng-template>

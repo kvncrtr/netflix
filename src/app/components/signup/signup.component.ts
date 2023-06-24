@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  userUrl: string =  "https://netflix-clone-fire-8079b-default-rtdb.firebaseio.com/Users";
+  userUrl: string =  "https://netflix-clone-fire-8079b-default-rtdb.firebaseio.com/Users/";
   jsonExt: string = '.json';
 
   user: any = {
@@ -27,7 +27,10 @@ export class SignupComponent {
 
     const userToSave = {
       email: this.user.email,
-      password: this.user.password
+      password: this.user.password,
+      bookmarks: [
+          {id: "0", isBookmarked: false}
+      ]
     };
 
     this.http.get(`${this.userUrl}${this.jsonExt}`).subscribe(
