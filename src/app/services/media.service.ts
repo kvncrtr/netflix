@@ -10,20 +10,25 @@ import { Media } from '../interfaces/media.interface'
    providedIn: 'root'
 })
 export class MediaService {
-  url: string = 'https://netflix-clone-fire-8079b-default-rtdb.firebaseio.com/Media/';
+  url: string = 'https://netflix-clone-fire-8079b-default-rtdb.firebaseio.com/Users/';
+  //https://netflix-clone-fire-8079b-default-rtdb.firebaseio.com/Users/-NYjkWjjEHqgHWrwvLGM/bookmarks
+  //https://netflix-clone-fire-8079b-default-rtdb.firebaseio.com/Users/-NYjkWjjEHqgHWrwvLGM/bookmarks/0
   jsonExt: string = '.json';
   mediaData: Media[] = [];
   memory: object = {}
+  uuid = localStorage.getItem('uuid');
 
   private memorySubscription = new BehaviorSubject<object>(this.memory)
   currentMemory = this.memorySubscription.asObservable();
 
-  constructor(private http: HttpClient) {};
+  constructor(private http: HttpClient) {}
+
+
 
   fetchData(): Subject<Media[]> {
     const subject = new Subject<Media[]>();
 
-    this.http.get<Media>(`${this.url}${this.jsonExt}`)
+    this.http.get<Media>(`${this.url}/${localStorage.getItem('uuid')}/bookmarks/${this.jsonExt}`)
       .pipe(
         map(responseData => {
           const setupArray = Object.entries(responseData);
@@ -44,7 +49,7 @@ export class MediaService {
   }
 
   patchNewBookmarkValue(id: any, body: object): Observable<any> {
-    return this.http.patch(`${this.url}${id}${this.jsonExt}`, body)
+    return this.http.patch(`${this.url}/${localStorage.getItem('uuid')}/bookmarks/${id}${this.jsonExt}`, body)
       .pipe(
         tap(() => {
           const current = this.memorySubscription.getValue();

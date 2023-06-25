@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.redirectToHome(this.isLoggedIn);
+    this.oauth.clearLocalStorage();
   }
 
   redirectToHome(isLoggedIn: string) {
