@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "netfix-clone-entertainment-web-app-fire": {
+    "netflix-clone": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/netfix-clone-entertainment-web-app-fire",
+            "outputPath": "dist/netflix-clone",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -22,7 +22,8 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "./_redirects"
             ],
             "styles": [
               "src/styles.css"
@@ -60,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "netfix-clone-entertainment-web-app-fire:build:production"
+              "browserTarget": "netflix-clone:build:production"
             },
             "development": {
-              "browserTarget": "netfix-clone-entertainment-web-app-fire:build:development"
+              "browserTarget": "netflix-clone:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "netfix-clone-entertainment-web-app-fire:build"
+            "browserTarget": "netflix-clone:build"
           }
         },
         "test": {

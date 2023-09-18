@@ -11,8 +11,6 @@ import { Media } from '../interfaces/media.interface'
 })
 export class MediaService {
   url: string = 'https://netflix-clone-fire-8079b-default-rtdb.firebaseio.com/Users/';
-  //https://netflix-clone-fire-8079b-default-rtdb.firebaseio.com/Users/-NYjkWjjEHqgHWrwvLGM/bookmarks
-  //https://netflix-clone-fire-8079b-default-rtdb.firebaseio.com/Users/-NYjkWjjEHqgHWrwvLGM/bookmarks/0
   jsonExt: string = '.json';
   mediaData: Media[] = [];
   memory: object = {}
