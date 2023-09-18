@@ -15,7 +15,7 @@ export class OauthService {
   invalidEmail = true;
   validPassword = false;
   launchReady = false;
-  url = 'https://netflix-clone-fire-8079b-default-rtdb.firebaseio.com/Users'; 
+  url = 'https://netflix-clone-9-18-2023-default-rtdb.firebaseio.com/Users'; 
   jsonExt = '.json';
 
 
