@@ -23,7 +23,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "./_redirects"
+              "src/_redirects"
             ],
             "styles": [
               "src/styles.css"
@@ -91,6 +91,14 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/netflix-clone",
+            "netlifyToken": "R4K9LbiDE_UX4Csh1gv7F84p95d4FzlGCAIOExOwZ-8",
+            "siteId": "netflix-clone"
           }
         }
       }
