@@ -6,14 +6,12 @@
          <img *ngIf="!bookmark" data-name="{{ cardData.title }}" class="bookmark" (click)="getElementName($event)" src="../../../assets/icon-bookmark-empty.svg" alt="bookmark empty">
          <img *ngIf="bookmark" data-name="{{ cardData.title }}" class="bookmark" (click)="getElementName($event)" src="../../../assets/icon-bookmark-full.svg" alt="bookmark full">
       </div>
-      
-      <!-- getElementName($event) -->
 
       <div class="preview--thumbnail-overlay">
-         <a class="preview--thumbnail-playBtn"><img class="play" src="./assets/icon-play.svg">Play</a>
+         <a class="preview--thumbnail-playBtn"><img class="play" src="./assets/icon-play.svg" alt="image">Play</a>
       </div>
    </div>
-<!-- {{ cardData }} -->
+   
    <div class="preview--details-container">
       <div class="preview--spec-container">
          <ul>

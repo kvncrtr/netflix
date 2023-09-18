@@ -94,6 +94,7 @@ export class HomeComponent implements OnInit {
       this.innerSlider.nativeElement.style.left = `-${inner.width - outer.width}px`;
     }
   }
+
   ngOnInit(): void {
     this.getMedia()
     this.updateView()
@@ -121,7 +122,6 @@ export class HomeComponent implements OnInit {
       }
     })
   }
-  // console.log()
 
   getMedia() : void {
     const subject = this.mediaService.fetchData();

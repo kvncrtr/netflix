@@ -12,7 +12,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="recommended-container">
         <h2 *ngIf="searchTerm == '' || searchTerm == null; else elseBlock ">Recommended for you</h2>
         <ng-template #elseBlock><h2>Found {{homeData.length}} results for '{{searchTerm}}'</h2></ng-template>

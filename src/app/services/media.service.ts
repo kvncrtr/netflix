@@ -21,21 +21,20 @@ export class MediaService {
 
   constructor(private http: HttpClient) {}
 
-
-
   fetchData(): Subject<Media[]> {
     const subject = new Subject<Media[]>();
 
-    this.http.get<Media>(`${this.url}/${localStorage.getItem('uuid')}/bookmarks/${this.jsonExt}`)
+    this.http.get<Media>(`${this.url}/Users/${localStorage.getItem('uuid')}/bookmarks/${this.jsonExt}`)
       .pipe(
         map(responseData => {
           const setupArray = Object.entries(responseData);
           const mediaArray: Media[] = [];
-
+          
           for (const key in setupArray) {
             const mediaObj = Object.fromEntries(setupArray);
             mediaArray.push({ ...mediaObj[key], id: key });
           };
+
           return mediaArray;
         })
       )
@@ -47,7 +46,7 @@ export class MediaService {
   }
 
   patchNewBookmarkValue(id: any, body: object): Observable<any> {
-    return this.http.patch(`${this.url}/${localStorage.getItem('uuid')}/bookmarks/${id}${this.jsonExt}`, body)
+    return this.http.patch(`${this.url}/Users/${localStorage.getItem('uuid')}/bookmarks/${id}${this.jsonExt}`, body)
       .pipe(
         tap(() => {
           const current = this.memorySubscription.getValue();
@@ -61,91 +60,3 @@ export class MediaService {
     this.memorySubscription.next(newMemory);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-patchNewBookmarkValue(objectRelation: any, id: any) {
-    const subject = new Subject<any>();
-    const body = {
-      ...objectRelation,
-      isBookmarked: !objectRelation.isBookmarked
-    };
-
-    this.http.patch(`${this.url}${id}${this.jsonExt}`, body)
-      .subscribe(data => {
-        subject.next(data)
-      });
-
-    return subject
-  }
-*/ 
