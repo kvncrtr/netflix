@@ -1,4 +1,7 @@
-# Frontend Mentor - Entertainment web app
+# View Project
+[View Live Application](https://netflix-clone-9-18-2023.netlify.app/)
+
+## Frontend Mentor - Entertainment web app
 
 ![Design preview for the Entertainment web app coding challenge](./preview.jpg)
 
