@@ -31,29 +31,6 @@ export class PreviewCardComponent implements OnInit {
       this.bookmarkData = data
     })
   }  
-
-  handleSubscription(id: any, body: object) {
-    this.mediaService.patchNewBookmarkValue(id, body)
-      .subscribe(data => {
-        this.mediaService.switchMemory(data);
-      })
-  }
-
-  associateElementsObject():void {
-    const associatedObject = this.bookmarkData.find(media => media.title === this.nameClicked)
-    const id = associatedObject.id;
-    const body = {
-      ...associatedObject,
-      isBookmarked: !associatedObject.isBookmarked
-    }
-    this.objectRelation = associatedObject;
-    this.handleSubscription(id, body)
-  }
-
-  getElementName(event: any) {
-    this.nameClicked = event.target.attributes.name.value
-    this.associateElementsObject()
-  }
 }
 
 
