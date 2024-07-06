@@ -15,7 +15,7 @@ export class OauthService {
   invalidEmail = true;
   validPassword = false;
   launchReady = false;
-  url = 'https://netflix-clone-fire-8079b-default-rtdb.firebaseio.com/Users'; 
+  url = 'http://localhost:3000/users'; 
   jsonExt = '.json';
 
 
@@ -45,10 +45,11 @@ export class OauthService {
       email: form.value.email,
       password: form.value.password
     }
+    console.log(this.userInfo)
     return this.getUsers()
   }
 
   getUsers() {
-    return this.http.get(`${this.url}${this.jsonExt}`)
+    return this.http.get(`${this.url}`)
   }
 }

@@ -33,7 +33,6 @@ export class LoginComponent implements OnInit {
   }
 
   validateUser(form: NgForm) {
-    // console.log()
     this.getSubmitMethod(form).subscribe(data => {
       for (const key in data) {
         if (data[key].email === form.value.email && data[key].password === form.value.password) {
@@ -54,5 +53,4 @@ export class LoginComponent implements OnInit {
   getSubmitMethod(form: NgForm) {
     return this.oauth.onSubmit(form)
   }
-
 }
