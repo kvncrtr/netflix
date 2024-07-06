@@ -49,21 +49,7 @@ export class BookmarkComponent {
   }
 
   onUpdateView() {
-    this.mediaService.currentMemory.subscribe(memory => {
-      this.memorySubject = memory
-      if (this.memorySubject != null) {
-        for (const index in this.bookmarkedMovies) {
-          if (this.bookmarkedMovies[index].id == this.memorySubject.id) {
-            this.bookmarkedMovies.splice(parseFloat(index), 1)
-          }
-        }
-        for (const index in this.bookmarkedSeries) {
-          if (this.bookmarkedSeries[index].id == this.memorySubject.id) {
-            this.bookmarkedSeries.splice(parseFloat(index), 1)
-          }
-        }
-      }
-    })
+    
   }
 
   filterData() {

@@ -110,17 +110,7 @@ export class HomeComponent implements OnInit {
   }
   
   updateView() {
-    this.mediaService.currentMemory.subscribe(memory => {
-      this.memorySubject = memory;
-      
-      if (this.memorySubject != null) {
-        for(const index in this.homeData) {
-          if (this.homeData[index].id == this.memorySubject.id) {
-            this.homeData.splice(parseFloat(index), 1, this.memorySubject)
-          }
-        }
-      }
-    })
+   
   }
 
   getMedia() : void {

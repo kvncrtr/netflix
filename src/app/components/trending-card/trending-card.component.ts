@@ -30,13 +30,6 @@ export class TrendingCardComponent implements OnInit {
     subject.subscribe(data => {
       this.bookmarkData = data
     })
-  }  
-
-  handleSubscription(id: any, body: object) {
-    this.mediaService.patchNewBookmarkValue(id, body)
-      .subscribe(data => {
-        this.mediaService.switchMemory(data);
-      })
   }
 
   associateElementsObject():void {
@@ -47,7 +40,6 @@ export class TrendingCardComponent implements OnInit {
       isBookmarked: !associatedObject.isBookmarked
     }
     this.objectRelation = associatedObject;
-    this.handleSubscription(id, body)
   }
 
   getElementName(event: any) {

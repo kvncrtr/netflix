@@ -47,16 +47,7 @@ export class MoviesComponent {
   }
 
   onUpdateView() {
-    this.mediaService.currentMemory.subscribe(memory => {
-      this.memorySubject = memory;
-      if (this.memorySubject != null) {
-        for (const index in this.movieData) {
-          if (this.movieData[index].id === this.memorySubject.id) {
-             this.movieData.splice(parseFloat(index), 1, this.memorySubject)
-          }
-        }
-       }
-    })
+    
   }
   // console.log()
 
