@@ -30,9 +30,10 @@ export class PreviewCardComponent implements OnInit {
     subject.subscribe(data => {
       this.bookmarkData = data
     })
-  }  
-
-  getElementName(event: Event) {
-    return this.idClicked = event.target["id"];
-  }
+  } 
+  
+//   getElementId(event: Event) {
+//     this.idClicked = event.target["id"];
+//     return this.idClicked
+//   }
 }

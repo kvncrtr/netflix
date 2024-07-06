@@ -13,6 +13,7 @@ import { SearchService } from 'src/app/services/search.service';
 })
 export class BookmarkComponent {
   isLoggedIn: string = this.oauth.getKeyValue('isLoggedIn');
+  id: number = parseInt(this.oauth.getKeyValue('id'));
   searchTerm: string;
   defaultBookmarkedMovies: any = [];
   defaultBookmarkedSeries: any = [];
@@ -29,28 +30,27 @@ export class BookmarkComponent {
 
     this.searchService.searchTerm$.subscribe(term => {
       this.searchTerm = term;
-      this.filterData();
     })
   }
   
   ngOnInit(): void {
     this.getMedia()
-    this.onUpdateView()
   }
   
   getMedia() : void {
-    const subject = this.mediaService.fetchData();
-
-    subject.subscribe(data => {
-      this.defaultBookmarkedMovies = data.filter(item => item.category === "Movie" && item.isBookmarked);
-      this.defaultBookmarkedSeries = data.filter(item => item.category === "TV Series" && item.isBookmarked);
-      this.filterData();
-    })
+   
   }
+}
 
-  onUpdateView() {
-    
-  }
+/*
+  this.filterData();
+  const subject = this.mediaService.fetchBookmarkedMovies(this.id);
+
+  subject.subscribe(data => {
+    this.defaultBookmarkedMovies = data.filter(item => item.category === "Movie" && item.isBookmarked);
+    this.defaultBookmarkedSeries = data.filter(item => item.category === "TV Series" && item.isBookmarked);
+    this.filterData();
+  })
 
   filterData() {
     if (this.searchTerm) {
@@ -69,4 +69,4 @@ export class BookmarkComponent {
       this.bookmarkedSeries = this.defaultBookmarkedSeries;
     }
   }
-}
+  */

@@ -40,13 +40,10 @@ export class MediaService {
         })
       )
       .subscribe(data => {
+        this.mediaData = data;
         subject.next(data);
       });
 
     return subject;
-  }
-
-  handleBookmarks(userId: number) {
-    
   }
 }
