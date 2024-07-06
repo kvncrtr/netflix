@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  userUrl: string =  "https://netflix-clone-fire-8079b-default-rtdb.firebaseio.com/Users/";
+  userUrl: string =  "https://netflix-clone-9-18-2023-default-rtdb.firebaseio.com/Users/";
   jsonExt: string = '.json';
 
   user: any = {
