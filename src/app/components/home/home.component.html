@@ -1,0 +1,23 @@
+<div class="container">
+    <app-nav-bar></app-nav-bar>
+    <app-search-bar></app-search-bar>
+
+    <div *ngIf="searchTerm == '' || searchTerm == null;">
+        <h2>Trending</h2>
+        <div class="trending-container" #sliderContainer>
+            <div class="trending-carousel" #innerSlider >
+                <ng-container *ngFor="let media of homeData">
+                    <app-trending-card *ngIf="media.isTrending" [cardData]="media"></app-trending-card>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+
+    <div class="recommended-container">
+        <h2 *ngIf="searchTerm == '' || searchTerm == null; else elseBlock ">Recommended for you</h2>
+        <ng-template #elseBlock><h2>Found {{homeData.length}} results for '{{searchTerm}}'</h2></ng-template>
+        <div class="recommended">
+            <app-preview-card *ngFor="let media of homeData" [cardData]="media"></app-preview-card>
+        </div>
+    </div>
+</div>
