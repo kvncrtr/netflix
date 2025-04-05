@@ -1,0 +1,140 @@
+.home {
+  min-height: 100vh;
+  background-color: #141414;
+  color: white;
+}
+
+.hero-section {
+  height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('../../assets/hero-background.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.content-section {
+  padding: 2rem;
+}
+
+.content-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.trending-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.home-container {
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.featured-section,
+.trending-tv-section,
+.recommended-section {
+  margin-bottom: 48px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.trending-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 24px;
+  padding-bottom: 16px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.trending-carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.trending-carousel > * {
+  flex: 0 0 600px;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+  color: #ff6b6b;
+  text-align: center;
+  padding: 0 24px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 16px;
+  }
+
+  .trending-carousel > * {
+    flex: 0 0 400px;
+  }
+
+  .preview-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trending-carousel > * {
+    flex: 0 0 300px;
+  }
+
+  .preview-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+  }
+} 

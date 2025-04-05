@@ -1,0 +1,97 @@
+.bookmark-container {
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #141414;
+  color: white;
+}
+
+.bookmark-container h1 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.bookmark-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.bookmark-card {
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.bookmark-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bookmark-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.bookmark-info {
+  padding: 1rem;
+}
+
+.bookmark-info h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.bookmark-info p {
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.bookmark-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.category-tag {
+  background-color: #e50914;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.remove-bookmark-btn {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.remove-bookmark-btn:hover {
+  background-color: #f40612;
+}
+
+.empty-bookmarks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+} 
